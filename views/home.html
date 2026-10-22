@@ -1,31 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
     <title>Appointment Scheduler</title>
-</head>
-<body>
-    <form id="appointment-form" href="#" method="post">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="fname">
-        <span class="err" id="err-fname">First name is required</span>
+  </head>
+  <body>
+    <div class="main">
+      <div class="heading">
+        <h1>Appointment Scheduler</h1>
+      </div>
 
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lname">
-        <span class="err" id="err-lname">Last name is required</span>
+      <div class="body">
+        <h2>Book An Appointment</h2>
+        <form id="appointment-form" href="#" method="post">
+          <div class="row">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Jane" />
+            <span class="err" id="err-fname">First name is required</span>
+          </div>
 
-        <label for="date">Date</label>
-        <input type="date" id="date" name="date">
-        <!-- <span class="err" id="err-date">Date is required</span> -->
+          <div class="row">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Doe" />
+            <span class="err" id="err-lname">Last name is required</span>
+          </div>
 
-        <label for="time">Time</label>
-        <input type="time" id="time" name="time">
-        <!-- <span class="err" id="err-time">Time is required</span> -->
+          <div class="row">
+            <label for="date">Meeting Date</label>
+            <input type="date" id="date" name="date" placeholder="mm/dd/yyyy" />
+            <span class="err" id="err-date">Date is required</span>
+          </div>
 
-        <button type="submit">Submit</button>
-    </form>
+          <div class="row">
+            <label for="time">Meeting Time</label>
+            <input type="time" id="time" name="time" />
+            <span class="err" id="err-time">Time is required</span>
+          </div>
 
-    
-</body>
+          <button type="submit">Book Appointment</button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
